@@ -8,7 +8,7 @@
   scroll-behavior: smooth;
 }
 body {
-  background-image: url("back.jpg");
+  background-image: url("images/back.jpg");
 }
 .navbar {
   background-color: seagreen;
@@ -36,7 +36,7 @@ body {
 }
 
 .quote {
-  background-image: url("quote-background.jpg");
+  background-image: url("images/quote-background.jpg");
   background-position: center;
   background-size: cover;
   border-radius: 10px;

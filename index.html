@@ -30,7 +30,7 @@
     <section id="search">
       <div class="box">
         <h1>Search Book</h1>
-        <form>
+        <form class="my-form">
           <label for="searchTitle">Title:</label>
           <input
             type="text"
@@ -48,26 +48,28 @@
       <div class="box">
         <h1>Add Book to the library!</h1>
 
-        <form id="add-form">
-          <span>
-            <label for="addTitle">Enter Title:</label>
-            <input
-              type="text"
-              id="addTitle"
-              name="addTitle"
-              placeholder="eg-Atomic Habits"
-            />
-          </span>
-          <span>
-            <label for="addAuthor">Author Name:</label>
-            <input
-              type="text"
-              id="addAuthor"
-              name="addAuthor"
-              placeholder="eg-James Clear"
-            />
-          </span>
-          <button type="submit" id="add-button">Add Book!</button>
+        <form class="my-form">
+          <div id="add-form">
+            <span>
+              <label for="addTitle">Enter Title:</label>
+              <input
+                type="text"
+                id="addTitle"
+                name="addTitle"
+                placeholder="eg-Atomic Habits"
+              />
+            </span>
+            <span>
+              <label for="addAuthor">Author Name:</label>
+              <input
+                type="text"
+                id="addAuthor"
+                name="addAuthor"
+                placeholder="eg-James Clear"
+              />
+            </span>
+            <button type="submit" id="add-button">Add Book!</button>
+          </div>
         </form>
         <div id="addResponse"></div>
       </div>
@@ -83,7 +85,7 @@
 
     <footer>
       <h6 id="footer">
-        © 2024 Website By Paresh Kalsotra. All rights reserved.
+        Copyright © 2024 Website By Paresh Kalsotra. All rights reserved.
       </h6>
     </footer>
   </body>

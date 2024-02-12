@@ -53,6 +53,23 @@ function searchBook() {
   document.getElementById("searchTitle").value = "";
 }
 
+function statusUpdate(id) {
+  for (let book of libraryArray) {
+    if (book.id == id && book.isBorrowed == "Available") {
+      book.isBorrowed = "Un Available";
+      document.getElementById(
+        "statusResponse"
+      ).innerText = `Book," ${book.title} by ${book.author}" has been borrowed.`;
+    } else if (book.id == id && book.isBorrowed == "Un Available") {
+      book.isBorrowed = "Available";
+      document.getElementById(
+        "statusResponse"
+      ).innerText = `Book," ${book.title} by ${book.author}" has been returned.`;
+    }
+  }
+  updateTable(libraryArray);
+}
+
 function updateTable(array) {
   const table = document.getElementById("table");
   table.innerHTML = "";
@@ -73,32 +90,23 @@ function updateTable(array) {
       td.innerHTML = `<button class ="statusbtn" onclick='statusUpdate(${book.id})'>Return</button>`;
     }
     row.appendChild(td);
-  }
-}
 
-function statusUpdate(id) {
-  for (let book of libraryArray) {
-    if (book.id == id && book.isBorrowed == "Available") {
-      book.isBorrowed = "Un Available";
-      document.getElementById(
-        "statusResponse"
-      ).innerText = `Book," ${book.title} by ${book.author}" has been borrowed.`;
-    } else if (book.id == id && book.isBorrowed == "Un Available") {
-      book.isBorrowed = "Available";
-      document.getElementById(
-        "statusResponse"
-      ).innerText = `Book," ${book.title} by ${book.author}" has been returned.`;
-    }
+    localStorage.setItem("item", JSON.stringify(array));
   }
-  updateTable(libraryArray);
 }
 
 //-------------------
-addBook("Zero to One", " Peter Thiel");
-addBook("Sapiens", " Yuval Noah Harari");
-addBook("Principles", "Ray Dalio", true);
-addBook("Atomic Habits", " James Clear ");
 
+let library = JSON.parse(localStorage.getItem("item"));
+console.log(libraryArray);
+
+if (library == null) {
+  addBook("Zero to One", " Peter Thiel");
+  addBook("Sapiens", " Yuval Noah Harari");
+  addBook("Principles", "Ray Dalio", true);
+} else {
+  libraryArray = library;
+}
 updateTable(libraryArray);
 
 // -------------------------
