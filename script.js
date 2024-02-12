@@ -98,7 +98,6 @@ function updateTable(array) {
 //-------------------
 
 let library = JSON.parse(localStorage.getItem("item"));
-console.log(libraryArray);
 
 if (library == null) {
   addBook("Zero to One", " Peter Thiel");
