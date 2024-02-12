@@ -41,15 +41,11 @@ function searchBook() {
   let searchTitle = document.querySelector("#searchTitle").value;
   let response = "Book Not Found.";
   if (searchTitle == "") {
-    response = "Enter title first.";
+    response = "Enter Book Title first.";
   } else {
-    let status = "Available";
     for (let bookdetails of libraryArray) {
       if (bookdetails.title == searchTitle) {
-        if (bookdetails.isborrowed) {
-          status = "Not Avalaible";
-        }
-        response = `Book found in the library. \n Details:- ID: ${bookdetails.id}, ${bookdetails.title} by ${bookdetails.author}, Status: ${status}`;
+        response = `Book found in the library. \n Details:- ID: ${bookdetails.id}, ${bookdetails.title} by ${bookdetails.author}, Status: ${bookdetails.isBorrowed}`;
       }
     }
   }
@@ -81,7 +77,6 @@ function updateTable(array) {
 }
 
 function statusUpdate(id) {
-  console.log(id);
   for (let book of libraryArray) {
     if (book.id == id && book.isBorrowed == "Available") {
       book.isBorrowed = "Un Available";
