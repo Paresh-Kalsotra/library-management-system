@@ -158,6 +158,11 @@ h1 {
   .box {
     padding-left: 10px;
   }
+  .box,
+  .quote {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
 }
 
 @media only screen and (max-width: 550px) {
@@ -172,7 +177,11 @@ h1 {
   h1 {
     font-size: 1rem;
   }
+
   .box {
     padding-left: 5px;
+  }
+  input {
+    width: 100%;
   }
 }
