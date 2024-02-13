@@ -1,6 +1,3 @@
-let id = 123;
-libraryArray = [];
-
 function Book(title, author, Borrowed = false) {
   this.id = id;
   this.title = title;
@@ -31,6 +28,7 @@ function addBook(title, author, isBorrowed) {
     let addedBook = new Book(title, author, isBorrowed);
     libraryArray.push(addedBook);
     id++;
+    localStorage.setItem("id-key", JSON.stringify(id));
     response = `Book Added to the library: Id = ${addedBook.id} , ${addedBook.title} by ${addedBook.author}`;
   }
   updateTable(libraryArray);
@@ -96,8 +94,13 @@ function updateTable(array) {
 }
 
 //-------------------
-
+let libraryArray = [];
+let id = JSON.parse(localStorage.getItem("id-key"));
 let library = JSON.parse(localStorage.getItem("item"));
+
+if (id == null) {
+  id = 123;
+}
 
 if (library == null) {
   addBook("Zero to One", " Peter Thiel");
