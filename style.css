@@ -116,6 +116,7 @@ h1 {
 .statusbtn {
   background-color: rgb(57, 149, 100);
   color: white;
+  width: 90%;
   border-radius: 5px;
 }
 #statusResponse,
@@ -166,9 +167,11 @@ h1 {
   }
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 400px) {
   th,
-  td {
+  td,
+  .navbar h2,
+  .navbar a {
     font-size: x-small;
   }
   #statusResponse,
