@@ -64,10 +64,17 @@ body {
   background-color: rgb(191, 211, 189);
   border: 1px solid black;
 }
-
-.add-box {
+#input-boxes {
   display: flex;
-  justify-content: left;
+  align-items: stretch;
+}
+#box1 {
+  margin-right: 5px;
+  width: 50%;
+}
+#box2 {
+  margin-left: 5px;
+  width: 50%;
 }
 label {
   font-weight: bold;
@@ -133,7 +140,7 @@ h1 {
   text-align: center;
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 750px) {
   th,
   td,
   label,
@@ -157,6 +164,14 @@ h1 {
   .navbar a {
     font-size: smaller;
   }
+  #input-boxes {
+    display: inline;
+  }
+  #box1,
+  #box2 {
+    width: 90%;
+  }
+
   .box {
     padding-left: 10px;
   }
