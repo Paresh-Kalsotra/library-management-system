@@ -188,7 +188,7 @@ h1 {
   td,
   .navbar h2,
   .navbar a {
-    font-size: x-small;
+    font-size: small;
   }
   #statusResponse,
   #addResponse,
@@ -199,7 +199,7 @@ h1 {
   }
 
   h1 {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   .margin-box {
     margin: 0px;
