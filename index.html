@@ -4,88 +4,88 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>library management system</title>
-
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
 
   <body>
     <nav class="navbar">
-      <h2>Library Management System</h2>
+      <h2><img id="logo" src="images/logo.png" />Library Management System</h2>
       <ul>
         <li><a href="#search">Search</a></li>
         <li><a href="#add">Add</a></li>
         <li><a href="#list">Books</a></li>
       </ul>
     </nav>
+    <div class="margin-box">
+      <div class="quote">
+        <h2>
+          Books should go where they will be most appreciated, and not sit
+          unread, gathering dust on a forgotten shelf, don't you agree?<br />
+          — Christopher Paolin
+        </h2>
+      </div>
 
-    <div class="quote">
-      <h2>
-        Books should go where they will be most appreciated, and not sit unread,
-        gathering dust on a forgotten shelf, don't you agree?<br />
-        — Christopher Paolin
-      </h2>
+      <section id="search">
+        <div class="box">
+          <h1>Search Book</h1>
+          <form>
+            <label for="searchTitle">Title:</label>
+            <input
+              type="text"
+              id="searchTitle"
+              name="searchTitle"
+              placeholder="Enter book title"
+            />
+            <button type="button" id="search-button">Search!</button>
+          </form>
+          <div id="searchResponse"></div>
+        </div>
+      </section>
+
+      <section id="add">
+        <div class="box">
+          <h1>Add Book to the library!</h1>
+
+          <form>
+            <div id="add-form">
+              <span>
+                <label for="addTitle">Enter Title:</label>
+                <input
+                  type="text"
+                  id="addTitle"
+                  name="addTitle"
+                  placeholder="eg-Atomic Habits"
+                />
+              </span>
+              <span>
+                <label for="addAuthor">Author Name:</label>
+                <input
+                  type="text"
+                  id="addAuthor"
+                  name="addAuthor"
+                  placeholder="eg-James Clear"
+                />
+              </span>
+              <button type="button" id="add-button">Add Book!</button>
+            </div>
+          </form>
+          <div id="addResponse"></div>
+        </div>
+      </section>
+
+      <section id="list">
+        <div class="box">
+          <h1>Book List:</h1>
+          <table id="table"></table>
+          <div id="statusResponse"></div>
+        </div>
+      </section>
     </div>
-
-    <section id="search">
-      <div class="box">
-        <h1>Search Book</h1>
-        <form>
-          <label for="searchTitle">Title:</label>
-          <input
-            type="text"
-            id="searchTitle"
-            name="searchTitle"
-            placeholder="Enter book title"
-          />
-          <button type="button" id="search-button">Search!</button>
-        </form>
-        <div id="searchResponse"></div>
-      </div>
-    </section>
-
-    <section id="add">
-      <div class="box">
-        <h1>Add Book to the library!</h1>
-
-        <form>
-          <div id="add-form">
-            <span>
-              <label for="addTitle">Enter Title:</label>
-              <input
-                type="text"
-                id="addTitle"
-                name="addTitle"
-                placeholder="eg-Atomic Habits"
-              />
-            </span>
-            <span>
-              <label for="addAuthor">Author Name:</label>
-              <input
-                type="text"
-                id="addAuthor"
-                name="addAuthor"
-                placeholder="eg-James Clear"
-              />
-            </span>
-            <button type="button" id="add-button">Add Book!</button>
-          </div>
-        </form>
-        <div id="addResponse"></div>
-      </div>
-    </section>
-
-    <section id="list">
-      <div class="box">
-        <h1>Book List:</h1>
-        <table id="table"></table>
-        <div id="statusResponse"></div>
-      </div>
-    </section>
-
     <footer>
       <h6 id="footer">
-        Copyright © 2024 Website By Paresh Kalsotra. All rights reserved.
+        Website By Paresh Kalsotra, Copyright © 2024. All rights reserved.
       </h6>
     </footer>
   </body>
