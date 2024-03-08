@@ -4,14 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>library management system</title>
-    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.library.css" />
+    <script src="./script.library.js" defer></script>
   </head>
 
   <body>
     <nav class="navbar">
-      <h2><img id="logo" src="images/logo.png" />Library Management System</h2>
+      <h2>
+        <img id="logo" src="./images/logo.png" />Library Management System
+      </h2>
       <ul>
         <li><a href="#search">Search</a></li>
         <li><a href="#add">Add</a></li>
@@ -41,6 +43,23 @@
             <button type="button" id="search-button">Search!</button>
           </form>
           <div id="searchResponse"></div>
+        </div>
+      </section>
+
+      <section id="remove">
+        <div class="box">
+          <h1>Remove Book</h1>
+          <form>
+            <label for="removeTitle">Title:</label>
+            <input
+              type="text"
+              id="removeTitle"
+              name="removeTitle"
+              placeholder="Enter book title"
+            />
+            <button type="button" id="remove-button">Remove!</button>
+          </form>
+          <div id="removeResponse"></div>
         </div>
       </section>
 

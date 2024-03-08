@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 1.1rem;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+body {
+  background-image: url("images/back.jpg");
+}
+h2 {
+  display: flex;
+  align-items: center;
+}
+#logo {
+  width: 35px;
+  margin: 10px;
+}
+.navbar {
+  background-color: seagreen;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar h2 {
+  padding: 8px;
+  color: white;
+}
+.navbar ul {
+  margin: 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+.navbar li {
+  display: block;
+}
+.margin-box {
+  margin: 80px;
+}
+.quote {
+  background-image: url("images/quote-background.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  margin: 50px;
+  padding: 30px;
+  text-align: center;
+  text-shadow: 1px 1px black, -1px -1px black;
+  color: white;
+  min-height: 300px;
+  display: flex;
+}
+.quote h2 {
+  font-weight: bold;
+  font-size: 1.3rem;
+  align-self: center;
+}
+.box {
+  text-align: left;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 30px;
+  padding-left: 30px;
+  background-color: rgb(191, 211, 189);
+  border: 1px solid black;
+}
+
+.add-box {
+  display: flex;
+  justify-content: left;
+}
+label {
+  font-weight: bold;
+}
+input {
+  background-color: rgb(230, 226, 226);
+  border: 1px solid black;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  padding: 2px;
+}
+#table {
+  width: 100%;
+  border: 4px solid #399564;
+  border-collapse: collapse;
+  border-radius: 5px;
+}
+th,
+td {
+  text-align: center;
+  border: 2px solid #399564;
+  width: 20%;
+  padding: 5px;
+}
+h1 {
+  font-weight: bolder;
+  padding-bottom: 10px;
+  font-size: 1.5rem;
+}
+#add-form {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+#add-button,
+#search-button,
+#remove-button {
+  background-color: rgb(57, 149, 100);
+  color: white;
+  padding: 3px;
+  border-radius: 5px;
+  width: 100%;
+}
+#search-button,
+#remove-button {
+  width: 100px;
+}
+.statusbtn {
+  background-color: rgb(57, 149, 100);
+  color: white;
+  width: 90%;
+  border-radius: 5px;
+}
+#statusResponse,
+#addResponse,
+#removeResponse,
+#searchResponse {
+  font-weight: bold;
+  color: #19502a;
+}
+#footer {
+  background-color: seagreen;
+  padding: 30px;
+  margin-top: 100px;
+  color: rgb(10, 0, 0);
+  text-align: center;
+}
+
+@media only screen and (max-width: 930px) and (min-width: 401px) {
+  th,
+  td,
+  label,
+  input,
+  #statusResponse,
+  #addResponse,
+  #searchResponse,
+  #removeResponse,
+  .statusbtn,
+  #add-button,
+  #search-button,
+  #remove-button,
+  h6 {
+    font-size: medium;
+  }
+  h1 {
+    font-size: 1.2rem;
+  }
+  .quote h2 {
+    font-size: medium;
+  }
+  .navbar h2,
+  .navbar a {
+    font-size: smaller;
+  }
+  .margin-box {
+    margin: 10px;
+  }
+  .box {
+    padding-left: 10px;
+  }
+  .box,
+  .quote {
+    margin-inline: 10px;
+  }
+  #logo {
+    width: 25px;
+    margin: 8px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  th,
+  td,
+  .navbar h2,
+  .navbar a {
+    font-size: small;
+  }
+  #statusResponse,
+  #addResponse,
+  #searchResponse,
+  #removeResponse,
+  .statusbtn,
+  h6 {
+    font-size: small;
+  }
+
+  h1 {
+    font-size: 1.1rem;
+  }
+  .margin-box {
+    margin: 0px;
+  }
+  .box {
+    padding-left: 5px;
+  }
+  .box,
+  .quote {
+    margin-inline: 10px;
+  }
+  input {
+    width: 100%;
+  }
+  #logo {
+    width: 15px;
+    margin: 5px;
+  }
+}
