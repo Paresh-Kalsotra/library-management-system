@@ -5,7 +5,7 @@ Welcome to the Library Management System repository! This project aims to provid
 
 ## Key Features
 
-- **Dynamic Login/Signup Page**: Easily access the system with secure authentication.
+- **Dynamic Login/Signup Page**: Easily access the system with secure JWT authentication.
 - **CRUD Operations**: Manage library resources seamlessly with Create, Read, Update, and Delete operations.
 - **Borrowing and Returning Functionality**: Handle book transactions effortlessly within the system.
 - **User-Friendly Interface**: Enjoy a smooth experience with our intuitive web interface.
