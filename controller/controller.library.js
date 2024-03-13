@@ -11,7 +11,6 @@ async function lmsLoad(req, res) {
 async function getBook(req, res) {
   try {
     const title = req.params.title;
-
     const book = await bookModel.findOne({ title: title });
     res.status(200).json(book);
   } catch (err) {
@@ -38,7 +37,12 @@ async function addBook(req, res) {
 //func to get booklist
 async function getAllBook(req, res) {
   try {
-    const booklist = await bookModel.find(); //.find returns a query so we have to await it
+    let limit = 5;
+    let page = req.params.pageNo || 1; //taking page number =1 or from req.params
+    const booklist = await bookModel
+      .find()
+      .skip((page - 1) * limit)
+      .limit(limit * 1); //.find returns a query so we have to await it
     res.status(200).json(booklist);
   } catch (err) {
     console.log(err);

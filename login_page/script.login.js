@@ -41,6 +41,10 @@ async function sendLoginData() {
     //displaying message
     loginResponse.style.display = "block";
     loginResponse.innerText = response;
+
+    //clearing the value of fields
+    document.getElementById("loginEmail").value = "";
+    document.getElementById("loginPassword").value = "";
   }
 }
 
@@ -70,6 +74,10 @@ async function sendSignupData() {
     //displaying message
     signupResponse.style.display = "block";
     signupResponse.innerText = response;
+
+    //clearing the input fields
+    document.getElementById("signupEmail").value = "";
+    document.getElementById("signupPassword").value = "";
   }
 }
 

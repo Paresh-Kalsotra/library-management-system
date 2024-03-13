@@ -23,13 +23,14 @@ async function signupUser(req, res) {
       password: hashedPassword,
     });
     await newUser.save();
+
     //jwt token generation
     const token = jwt.sign({ email: newUser.email }, process.env.jwt_key, {
       expiresIn: "1h",
     });
     res.cookie("libUserToken", token);
 
-    res.redirect(301, "../library"); //login success
+    res.redirect(302, "../library"); //login success
   } catch (err) {
     if (err._message === "user validation failed") {
       return res.status(422).json("Enter a valid email");
@@ -55,13 +56,14 @@ async function loginUser(req, res) {
       if (!result) {
         return res.status(401).json("Incorrect email or password"); //un authorized
       }
+
       //jwt token generation
       const token = jwt.sign({ email: logUser[0].email }, process.env.jwt_key, {
         expiresIn: "1h",
       });
       res.cookie("libUserToken", token);
 
-      res.redirect(301, "../library"); //login success
+      res.redirect(302, "../library"); //login success
     });
   } catch (err) {
     res.send(500).json("We are unable to log you in.");

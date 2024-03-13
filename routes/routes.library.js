@@ -13,7 +13,7 @@ router.get("/books/:title", libraryController.getBook);
 router.post("/books", libraryController.addBook);
 
 //route to get all books
-router.get("/books", libraryController.getAllBook);
+router.get("/books/page/:pageNo", libraryController.getAllBook);
 
 //route to update borrowed status
 router.patch("/books", libraryController.updateBook);
